@@ -49,3 +49,20 @@ Add ability to display or hide the new password for discretion
 Inline criteria through booleans to simplify the process and to see all selected criteria choices for end user
 Add favicon
 Update background
+
+
+
+plan?
+//click button
+//prompt "would you like to generate a password?"
+//alert telling them which criteria they will be allowed to choose from
+//request password length between 8 and 128
+//include lowercase?
+//include uppercase?
+//include numeric?
+//include special characters?
+//if none selected then user is sent back to select at least one
+//confirm: summary of the criteria that will be used, continue or reselect?
+//password is generated using the criteria
+//password is displayed in Secure Password box
+
