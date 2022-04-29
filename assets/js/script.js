@@ -6,17 +6,22 @@
 //---------variables-----------
 
 //var chars = []
-var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var pwLength = prompt('How Long Would You Like Your Password?');
+//var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//var pwLength = prompt('How Long Would You Like Your Password?');
 
 
 //-----------Code------------
 
-
-function generatePassword(){
-
-
-
+function generatePassword() {
+  var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var pwLength = prompt('How Long Would You Like Your Password?');
+  var password = "";
+  for (var i = 0; i <= pwLength; i++) {
+    var randoNum = Math.floor(Math.random() * chars.length);
+    password += chars.substring(randoNum, randoNum + 1);
+    
+  };
+  return password
 }
 
 
