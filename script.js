@@ -15,6 +15,33 @@
 
 //-----------Code------------
 
+function random(min, max) {
+  const randoNum = Math.floor(Math.random() * (max - min + 1)) + min;
+  return randoNum;
+}
+random(0,9);
+
+function randoLetter(){
+  const list = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var res = "";
+  for(var i = 0; i < pwLength; i++) {
+      var rnd = Math.floor(Math.random() * list.length);
+      res = res + list.charAt(rnd);
+  }
+  return res;
+}
+
+  //randomize uppercase and lowercase
+    //if(uc = false)
+      //change all letters to lowercase
+    //else if(lc = true)
+      //make first letter capital
+      //make last letter lowercase
+      //do mathrandom to decide 
+
+
+
+var randomString = rand_str_without_O0();
 
 //start function 
 
@@ -27,11 +54,14 @@ var pwLength = prompt("How long would you like your password?");
     //verify pass continue, fail loop back to request
   //ask what criteria they want
     //include lowercase?
-      //ask if they want lowercase
-      //return value yes/no
+        //ask if they want lowercase
+        //return value yes/no
     //include uppercase?
-      //ask if they want uppercase
-      //return value yes/no
+        //ask if they want uppercase
+        //return value yes/no
+      //check that at least one letter case is true
+        //if yes then continue
+        //if none then user is sent back to select at least one
     //include numeric?
       //ask if they want numeric
       //return value yes/no
@@ -46,6 +76,9 @@ var pwLength = prompt("How long would you like your password?");
     //
   
   //password is generated using the criteria
+    //for-loop # of times equal to pwLength
+      //figure out how to ensure all the criteria are included for sure
+      //possibly count how many were yes and put them in a loop at fixed spots
 
     //return the new password
 
