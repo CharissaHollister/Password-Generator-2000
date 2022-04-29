@@ -37,7 +37,8 @@ function randoLetter(){
     //else if(lc = true)
       //make first letter capital
       //make last letter lowercase
-      //do mathrandom to decide 
+      //do mathrandom to decide upper (>0.5) and lower (<0.5) of all the ones in between first and last letters
+      
 
 
 

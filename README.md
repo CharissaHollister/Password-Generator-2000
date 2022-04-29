@@ -52,7 +52,7 @@ Update background
 
 
 
-plan?
+# plan?
 //click button
 //prompt "would you like to generate a password?"
 //alert telling them which criteria they will be allowed to choose from
