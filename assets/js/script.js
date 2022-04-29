@@ -5,31 +5,74 @@
 
 //---------variables-----------
 
-// var nums = [1,2,3,4,5,6,7,8,9];
-// var alphas = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
-// var spChars = ["!","#","$","*","."];
+//var chars = []
+var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var pwLength = prompt('How Long Would You Like Your Password?');
 
-// var lc = "abcdefghijklmnopqrstuvwxyz";
-// var uc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-// var no = "0123456789";
 
 //-----------Code------------
 
-function random(min, max) {
-  const randoNum = Math.floor(Math.random() * (max - min + 1)) + min;
-  return randoNum;
-}
-random(0,9);
 
-function randoLetter(){
-  const list = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var res = "";
-  for(var i = 0; i < pwLength; i++) {
-      var rnd = Math.floor(Math.random() * list.length);
-      res = res + list.charAt(rnd);
-  }
-  return res;
+function generatePassword(){
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function random(min, max) {
+//   const randoNum = Math.floor(Math.random() * (max - min + 1)) + min;
+//   return randoNum;
+// }
+// random(0,9);
+
+// function randoLetter(){
+//   const list = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//   var res = "";
+//   for(var i = 0; i < pwLength; i++) {
+//       var rnd = Math.floor(Math.random() * list.length);
+//       res = res + list.charAt(rnd);
+//   }
+//   return res;
+// }
+
+
+
+
+
+
 
   //randomize uppercase and lowercase
     //if(uc = false)
@@ -39,17 +82,12 @@ function randoLetter(){
       //make last letter lowercase
       //do mathrandom to decide upper (>0.5) and lower (<0.5) of all the ones in between first and last letters
       
-
-
-
-var randomString = rand_str_without_O0();
-
 //start function 
 
   //verify the user wants to create a password
     //yes continue, no break
   //ask what length they want
-var pwLength = prompt("How long would you like your password?");
+//var pwLength = prompt("How long would you like your password?");
   //check that it's between 8 and 128 
     //return what they picked
     //verify pass continue, fail loop back to request
@@ -84,7 +122,6 @@ var pwLength = prompt("How long would you like your password?");
     //return the new password
 
   //password is displayed in Secure Password box
-
 
 
 
