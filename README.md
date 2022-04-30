@@ -22,7 +22,7 @@ At least one criteria is required for user to continue
 Password generated uses the criteria indicated only
 
 
-
+Syntax:  ![alt text goes here in between square brackets](relative path of the file goes here between parenthesis
 
 
 
