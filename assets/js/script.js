@@ -9,10 +9,10 @@ var password = "";
 var chars = "";
 var cp = "";
 var sp = "";
-// var charsUp = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-// var charsLow = "abcdefghijklmnopqrstuvwxyz";
-// var charsNum = "123456789";
-// var charSC = "!@#$%^&*()";
+var charsUp = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var charsLow = "abcdefghijklmnopqrstuvwxyz";
+var charsNum = "123456789";
+var charSC = "!@#$%^&*()";
 //-----------Code------------
 
 //Ask for user input, password length
@@ -31,26 +31,24 @@ function pwPrompt(){
 
   //ask about lowercase; yes charL = "abcdefghijklmnopqrstuvwxyz"
   // ask about uppercase; yes charU = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-function casePick(){
-  var casePick = "";
-  casePick = prompt('Would You Like to Include Uppercase, Lowercase, or Both?');
+function casePick1(){
+  //var casePick = "";
+  var casePick = prompt('Would You Like to Include Uppercase, Lowercase, or Both?');
   casePick = casePick.toLowerCase();
     if (casePick === "uppercase") {
-      chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      cp = "UC";
+      chars = charsUp;
     }
     else if (casePick === "lowercase") {
-      chars = "abcdefghijklmnopqrstuvwxyz";
-      cp = "LC";
+      chars = charsLow;
     }
     else if (casePick === "both") {
-      chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-      cp = "UL";
+      chars = charsUp + charsLow;
     }
-    else{
+    else {
     window.alert("Must be entered as 'uppercase', 'lowercase', or 'both'");
-    casePick();
-  }
+    casePick1();
+    }
+ 
 }
 
 
@@ -61,20 +59,16 @@ function specialPick(){
   specialPick = prompt('Would You Like to Include Numbers, Special Characters (special), Neither, or Both?');
   specialPick = specialPick.toLowerCase();
     if (specialPick === "numbers") {
-      chars = (chars + "123456789");
-      sp = "NC";
+      chars = (chars + charsNum);
     }
     else if (specialPick === "special") {
-      chars = (chars + "!@#$%^&*()");
-      sp = "SC";
+      chars = (chars + charSC);
     }
     else if (specialPick === "both") {
-      chars = (chars + "123456789!@#$%^&*()");
-      sp = "NS";
+      chars = (chars + charSC + charsNum);
     }
     else if (specialPick === "neither"){
       chars = chars;
-      sp = "NO";
     }
     else{
     window.alert("Must be entered as 'numbers', 'special', or 'both'");
@@ -82,21 +76,33 @@ function specialPick(){
   }
 }
 
+// check if password has all the requirements
+function isValidPassword() {
+  pwValid = prompt("Your New Password is " + password + " Would you like to continue? Yes or No");
+  pwValid = pwValid.toLowerCase();
+  if (pwValid === "yes") {
+    password = password;
+  }
+  else if (pwValid === "no") {
+    password = "";
+  }
+  else{
+  window.alert("Must be entered as 'yes' or 'no'");
+  pwValid();
+  }
+}
+
+
 function generatePassword() {
   pwPrompt();
-  casePick();
+  casePick1();
   specialPick();
     for (var i = 0; i <= pwLength; i++) {
       var randoNum = Math.floor(Math.random() * chars.length);
       password += chars.substring(randoNum, randoNum + 1);
     };
-
-    if (cp = "UC")
-
-
-
-    
-    return password
+  isValidPassword();
+  return password;
 }
 
 // Get references to the #generate element
