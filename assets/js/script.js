@@ -7,20 +7,23 @@
 var pwLength = "";
 var password = "";
 var chars = "";
-var charsUp = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var charsLow = "abcdefghijklmnopqrstuvwxyz";
-var charsNum = "123456789";
-var charSC = "!@#$%^&*()";
+// var charsUp = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+// var charsLow = "abcdefghijklmnopqrstuvwxyz";
+// var charsNum = "123456789";
+// var charSC = "!@#$%^&*()";
 //-----------Code------------
 
 //Ask for user input, password length
 function pwPrompt(){
   pwLength = prompt('How Long Would You Like Your Password?');
   //validate answer is between 8 and 128
-  if (pwLength < 8 || pwLength > 128) {
+  // if (parseInt(pwLength) == NaN){
+  //   window.alert("Password must be a number");
+  //   pwPrompt();}
+  if (pwLength < 8 || pwLength > 128){
     window.alert("Password must be between 8 and 128 in length");
     pwPrompt();
-  }
+    }
 }
 
   //ask about lowercase; yes charL = "abcdefghijklmnopqrstuvwxyz"
@@ -29,21 +32,21 @@ function pwPrompt(){
     var casePick = "";
     casePick = prompt('Would You Like to Include Uppercase, Lowercase, or Both?');
     casePick = casePick.toLowerCase();
-    if (casePick = "uppercase") {
-      chars = charsUp;
+    console.log(casePick)
+    if (casePick === "uppercase") {
+      chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     }
-    else if (casePick = "lowercase") {
-      chars = charsLow;
+    else if (casePick === "lowercase") {
+      chars = "abcdefghijklmnopqrstuvwxyz";
     }
-    else if (casePick = "both") {
-      chars = charsUp;
-      chars = chars.concat(charsDown);
+    else if (casePick === "both") {
+      chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     }
     else{
     window.alert("Must be entered as 'uppercase', 'lowercase', or 'both'");
     casePick();
     }
-    console.log(chars)
+
   }
 
 
@@ -53,14 +56,16 @@ function pwPrompt(){
     var specialPick = ""
     specialPick = prompt('Would You Like to Include Numbers, Special Characters (special), or Both?');
     specialPick = specialPick.toLowerCase();
-    if (specialPick = "numbers") {
+    if (specialPick === "numbers") {
+      chars = (chars + "123456789");
 
     }
-    else if (specialPick = "special") {
+    else if (specialPick === "special") {
+      chars = (chars + "!@#$%^&*()");
 
     }
-    else if (specialPick = "both") {
-
+    else if (specialPick === "both") {
+      chars = (chars + "123456789!@#$%^&*()");
     }
     else{
     window.alert("Must be entered as 'numbers', 'special', or 'both'");
@@ -72,7 +77,7 @@ function pwPrompt(){
 
 
 function generatePassword() {
-  var chars = "asdfasdf";
+  //var chars = "asdfasdf";
   pwPrompt();
   casePick();
   specialPick();
