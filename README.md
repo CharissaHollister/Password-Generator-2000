@@ -3,9 +3,9 @@
 Authored by Charissa Hollister 04/29/2022
 
 # HTML and CSS
-Site has a simple style to keep the focus on generating a unique and secure password
-Site has a button to use to initiate password generation
-After the button is clicked a secure password will display for the user
+Site has a simple style to keep the focus on generating a unique and secure password__
+Site has a button to use to initiate password generation__
+After the button is clicked a secure password will display for the user__
 HTML linked to the javascript file and CSS
 Password display is in a font that is clear and easily read to prevent user from misreading characters
 
