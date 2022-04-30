@@ -77,20 +77,20 @@ function specialPick(){
 }
 
 // check if password has all the requirements
-function isValidPassword() {
-  pwValid = prompt("Your New Password is " + password + " Would you like to continue? Yes or No");
-  pwValid = pwValid.toLowerCase();
-  if (pwValid === "yes") {
-    password = password;
-  }
-  else if (pwValid === "no") {
-    password = "";
-  }
-  else{
-  window.alert("Must be entered as 'yes' or 'no'");
-  pwValid();
-  }
-}
+// function isValidPassword() {
+//   pwValid = prompt("Your New Password is " + password + " Would you like to continue? Yes or No");
+//   pwValid = pwValid.toLowerCase();
+//   if (pwValid === "yes") {
+//     password = password;
+//   }
+//   else if (pwValid === "no") {
+//     password = "";
+//   }
+//   else{
+//   window.alert("Must be entered as 'yes' or 'no'");
+//   pwValid();
+//   }
+// }
 
 
 function generatePassword() {
@@ -101,8 +101,8 @@ function generatePassword() {
       var randoNum = Math.floor(Math.random() * chars.length);
       password += chars.substring(randoNum, randoNum + 1);
     };
-  isValidPassword();
-  return password;
+  //isValidPassword();
+  return password
 }
 
 // Get references to the #generate element
