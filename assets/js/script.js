@@ -13,6 +13,7 @@ var charsUp = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var charsLow = "abcdefghijklmnopqrstuvwxyz";
 var charsNum = "123456789";
 var charSC = "!@#$%^&*()";
+
 //-----------Code------------
 
 //Ask for user input, password length
@@ -54,7 +55,7 @@ function casePick1(){
 
   //ask about numeric; yes charN = "123456789"
   //ask about special characters; "!@#$%^&*()"
-function specialPick(){
+function specialPick1(){
   var specialPick = ""
   specialPick = prompt('Would You Like to Include Numbers, Special Characters (special), Neither, or Both?');
   specialPick = specialPick.toLowerCase();
@@ -72,7 +73,7 @@ function specialPick(){
     }
     else{
     window.alert("Must be entered as 'numbers', 'special', or 'both'");
-    specialPick();
+    specialPick1();
   }
 }
 
@@ -81,10 +82,10 @@ function specialPick(){
 //   pwValid = prompt("Your New Password is " + password + " Would you like to continue? Yes or No");
 //   pwValid = pwValid.toLowerCase();
 //   if (pwValid === "yes") {
-//     password = password;
+//     return password
 //   }
 //   else if (pwValid === "no") {
-//     password = "";
+//     generatePassword()
 //   }
 //   else{
 //   window.alert("Must be entered as 'yes' or 'no'");
@@ -96,7 +97,7 @@ function specialPick(){
 function generatePassword() {
   pwPrompt();
   casePick1();
-  specialPick();
+  specialPick1();
     for (var i = 0; i <= pwLength; i++) {
       var randoNum = Math.floor(Math.random() * chars.length);
       password += chars.substring(randoNum, randoNum + 1);
