@@ -22,6 +22,7 @@ At least one criteria is required for user to continue<br />
 Password generated uses the criteria indicated only<br />
 
 # Website Info
+https://charissahollister.github.io/Password-Generator-2000/ <br/ >
 
 ![ScreenShot](./assets/Screenshot%20Password%20Generator%20Webpage.jpg)
 
