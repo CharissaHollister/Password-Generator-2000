@@ -15,11 +15,15 @@ link to IDs for the generate button and the secure password display<br />
 Click of the "generate password" button initiates the process<br />
 A series of prompts for password criteria allow for varied user needs:<br />
     - character length (8 to 128)<br />
-    - case<br />
+    - upper case<br />
+    - lower case<br />
     - numbers<br />
     - special characters<br />
 At least one criteria is required for user to continue<br />
+Give an alert and return if input is invalid<br /> 
 Password generated uses the criteria indicated only<br />
+Password will contain at least 1 of each criteria selected<br />
+
 
 ## Website Info
 ### https://charissahollister.github.io/Password-Generator-2000/
@@ -28,27 +32,26 @@ Password generated uses the criteria indicated only<br />
 ![ScreenShot](./assets/Screenshot%20Password%20Generator%20Webpage.jpg)
 
 
-
-## Assignment criteria
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-
 ## Future improvement opportunities
-Add quicklink to copy password to clipboard
-Add ability to display or hide the new password for discretion
-Inline criteria through booleans to simplify the process and to see all selected criteria choices for end user
-Add favicon
-Update background
+Add quicklink to copy password to clipboard<br />
+Add ability to display or hide the new password for discretion<br />
+Inline criteria through booleans to simplify the process and to see all selected criteria choices for end user<br />
+Add favicon<br />
+Update background<br />
+
+## Minimum customer criteria
+GIVEN I need a new, secure password<br />
+WHEN I click the button to generate a password<br />
+THEN I am presented with a series of prompts for password criteria<br />
+WHEN prompted for password criteria<br />
+THEN I select which criteria to include in the password<br />
+WHEN prompted for the length of the password<br />
+THEN I choose a length of at least 8 characters and no more than 128 characters<br />
+WHEN asked for character types to include in the password<br />
+THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters<br />
+WHEN I answer each prompt<br />
+THEN my input should be validated and at least one character type should be selected<br />
+WHEN all prompts are answered<br />
+THEN a password is generated that matches the selected criteria<br />
+WHEN the password is generated<br />
+THEN the password is either displayed in an alert or written to the page<br />
