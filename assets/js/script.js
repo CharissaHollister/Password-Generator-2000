@@ -24,6 +24,7 @@ function pwPrompt(){
     window.alert("Password must be between 8 and 128 in length");
     pwPrompt();
   }
+  //validate answer is a number
   if (isNaN(pwLength)) {
     window.alert("Password must be a number");
     pwPrompt();
@@ -73,7 +74,7 @@ function pwIsVal() {
     }
   }
 
-//password created using criteria selected random and with 1 of each type
+//password created using only criteria selected and with 1 of each type
 function createPassword() {
     password = "";
         var remainNums = (pwLength - charsG.length);
@@ -85,7 +86,7 @@ function createPassword() {
     pwIsVal();
 }
 
-//
+//overall function to initiate password generation via button click
 function generatePassword() {
 
   pwPrompt();
@@ -107,7 +108,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
@@ -129,4 +129,4 @@ copyTextBtn.addEventListener('click', function(event) {
             window.alert("Password Not Copied");
         }
 
-    });
+});

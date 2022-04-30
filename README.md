@@ -23,9 +23,10 @@ At least one criteria is required for user to continue<br />
 Give an alert and return if input is invalid<br /> 
 Password generated uses the criteria indicated only<br />
 Password will contain at least 1 of each criteria selected<br />
+Password will display in place of 'your secure password'<br />
 
 
-## Website Info
+## Website Access
 ### https://charissahollister.github.io/Password-Generator-2000/
 ### https://github.com/CharissaHollister/Password-Generator-2000
 
@@ -37,10 +38,10 @@ Add quicklink to copy password to clipboard *Completed*<br />
 Add ability to display or hide the new password for discretion<br />
 Inline criteria through booleans to simplify the process and to see all selected criteria choices for end user<br />
 Have user verify they are satisfied with the password *completed*<br />
-Add favicon<br />
-Update background<br />
+Add favicon *completed*<br />
+Update background *completed*<br />
 
-## Minimum customer criteria
+### Minimum customer criteria
 GIVEN I need a new, secure password<br />
 WHEN I click the button to generate a password<br />
 THEN I am presented with a series of prompts for password criteria<br />
