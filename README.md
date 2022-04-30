@@ -4,23 +4,24 @@ Authored by Charissa Hollister 04/29/2022
 
 # HTML and CSS
 Site has a simple style to keep the focus on generating a unique and secure password<br />
-Site has a button to use to initiate password generation__
-After the button is clicked a secure password will display for the user__
-HTML linked to the javascript file and CSS
-Password display is in a font that is clear and easily read to prevent user from misreading characters
+Site has a button to use to initiate password generation<br />
+After the button is clicked a secure password will display for the user<br />
+HTML linked to the javascript file and CSS<br />
+Password display is in a font that is clear and easily read to prevent user from misreading characters<br />
 
 
 # Script
-link to IDs for the generate button and the secure password display
-Click of the "generate password" button initiates the process
-A series of prompts for password criteria allow for varied user needs:
-    character length (8 to 128)
-    case
-    numbers
-    special characters
-At least one criteria is required for user to continue
-Password generated uses the criteria indicated only
+link to IDs for the generate button and the secure password display<br />
+Click of the "generate password" button initiates the process<br />
+A series of prompts for password criteria allow for varied user needs:<br />
+    - character length (8 to 128)<br />
+    - case<br />
+    - numbers<br />
+    - special characters<br />
+At least one criteria is required for user to continue<br />
+Password generated uses the criteria indicated only<br />
 
+# Website Info
 
 ![ScreenShot](./assets/Screenshot%20Password%20Generator%20Webpage.jpg)
 
