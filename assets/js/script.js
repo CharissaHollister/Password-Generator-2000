@@ -4,18 +4,59 @@
 
 
 //---------variables-----------
-
-//var chars = []
-//var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-//var pwLength = prompt('How Long Would You Like Your Password?');
-
-
+var pwLength = "";
+var password = "";
+var charsUp = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var charsLow = "abcdefghijklmnopqrstuvwxyz";
+var charsNum = "123456789";
+var charSC = "!@#$%^&*()";
 //-----------Code------------
 
+//Ask for user input, password length
+function pwPrompt(){
+  pwLength = prompt('How Long Would You Like Your Password?');
+  //validate answer is between 8 and 128
+  if (pwLength < 8 || pwLength > 128) {
+    window.alert("Password must be between 8 and 128 in length");
+    pwPrompt();
+  }
+}
+
+  //ask about lowercase; yes charL = "abcdefghijklmnopqrstuvwxyz"
+
+  // ask about uppercase; yes charU = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  function casePick(){
+    var casePick = ""
+    casePick = prompt('Would You Like to Include Uppercase, Lowercase, or Both?');
+    casePick = casePick.toLowerCase();
+    if (casePick = "uppercase") {
+
+    }
+    else if (casePick = "lowercase") {
+
+    }
+    else if (casePick = "both") {
+
+    }
+    else{
+    window.alert("Must be entered as 'uppercase', 'lowercase', or 'both'");
+    casePick();
+    }
+  }
+
+
+  //ask about numeric; yes charN = "123456789"
+
+  //ask about special characters; "!@#$%^&*()"
+
+
+
+
+
 function generatePassword() {
-  var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var pwLength = prompt('How Long Would You Like Your Password?');
-  var password = "";
+  var chars = "";
+  pwPrompt();
+  casePick();
   for (var i = 0; i <= pwLength; i++) {
     var randoNum = Math.floor(Math.random() * chars.length);
     password += chars.substring(randoNum, randoNum + 1);
