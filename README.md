@@ -33,9 +33,10 @@ Password will contain at least 1 of each criteria selected<br />
 
 
 ## Future improvement opportunities
-Add quicklink to copy password to clipboard<br />
+Add quicklink to copy password to clipboard *Completed*<br />
 Add ability to display or hide the new password for discretion<br />
 Inline criteria through booleans to simplify the process and to see all selected criteria choices for end user<br />
+Have user verify they are satisfied with the password *completed*<br />
 Add favicon<br />
 Update background<br />
 
