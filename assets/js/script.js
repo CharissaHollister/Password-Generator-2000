@@ -3,9 +3,10 @@
 //**************************** */
 
 
-//---------variables-----------
+//---------Global variables-----------
 var pwLength = "";
 var password = "";
+var chars = "";
 var charsUp = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var charsLow = "abcdefghijklmnopqrstuvwxyz";
 var charsNum = "123456789";
@@ -23,40 +24,58 @@ function pwPrompt(){
 }
 
   //ask about lowercase; yes charL = "abcdefghijklmnopqrstuvwxyz"
-
   // ask about uppercase; yes charU = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   function casePick(){
-    var casePick = ""
+    var casePick = "";
     casePick = prompt('Would You Like to Include Uppercase, Lowercase, or Both?');
     casePick = casePick.toLowerCase();
     if (casePick = "uppercase") {
-
+      chars = charsUp;
     }
     else if (casePick = "lowercase") {
-
+      chars = charsLow;
     }
     else if (casePick = "both") {
-
+      chars = charsUp;
+      chars = chars.concat(charsDown);
     }
     else{
     window.alert("Must be entered as 'uppercase', 'lowercase', or 'both'");
     casePick();
     }
+    console.log(chars)
   }
 
 
   //ask about numeric; yes charN = "123456789"
-
   //ask about special characters; "!@#$%^&*()"
+  function specialPick(){
+    var specialPick = ""
+    specialPick = prompt('Would You Like to Include Numbers, Special Characters (special), or Both?');
+    specialPick = specialPick.toLowerCase();
+    if (specialPick = "numbers") {
 
+    }
+    else if (specialPick = "special") {
+
+    }
+    else if (specialPick = "both") {
+
+    }
+    else{
+    window.alert("Must be entered as 'numbers', 'special', or 'both'");
+    specialPick();
+    }
+  }
 
 
 
 
 function generatePassword() {
-  var chars = "";
+  var chars = "asdfasdf";
   pwPrompt();
   casePick();
+  specialPick();
   for (var i = 0; i <= pwLength; i++) {
     var randoNum = Math.floor(Math.random() * chars.length);
     password += chars.substring(randoNum, randoNum + 1);
