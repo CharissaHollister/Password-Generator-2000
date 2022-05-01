@@ -18,6 +18,7 @@ var charsG = "";
 
 //Ask for user input: password length
 function pwPrompt(){
+  chars = "";
   pwLength = prompt('How Long Would You Like Your Password?');
   //validate answer is between 8 and 128
   if (pwLength < 8 || pwLength > 128){
@@ -90,7 +91,7 @@ function createPassword() {
 
 //overall function to initiate password generation via button click
 function generatePassword() {
-chars = "";
+
   pwPrompt();
   charPick("Uppercase", charsUp);
   charPick("Lowercase", charsLow);
