@@ -65,7 +65,7 @@ function pwIsVal() {
     pwValid = prompt("Your New Password is " + password + " Would you like to continue? Yes or No");
     pwValid = pwValid.toLowerCase();
     if (pwValid === "yes") {
-        password = password;
+        //password = password;
     }
     else if (pwValid === "no") {
       createPassword();
