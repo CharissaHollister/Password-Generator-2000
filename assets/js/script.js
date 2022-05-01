@@ -54,6 +54,8 @@ function charPick(type, charType){
 function onePick(){
   if (charsG.length < 1 ){
       window.alert("Must Choose at Least One Character Type");
+    password = "";
+    chars = "";
       generatePassword();
     }
 }
