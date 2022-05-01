@@ -90,7 +90,7 @@ function createPassword() {
 
 //overall function to initiate password generation via button click
 function generatePassword() {
-
+chars = 1'';
   pwPrompt();
   charPick("Uppercase", charsUp);
   charPick("Lowercase", charsLow);
