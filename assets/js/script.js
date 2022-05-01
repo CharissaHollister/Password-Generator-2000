@@ -19,6 +19,7 @@ var charsG = "";
 //Ask for user input: password length
 function pwPrompt(){
   chars = "";
+  charsG = "";
   pwLength = prompt('How Long Would You Like Your Password?');
   //validate answer is between 8 and 128
   if (pwLength < 8 || pwLength > 128){
@@ -55,8 +56,6 @@ function charPick(type, charType){
 function onePick(){
   if (charsG.length < 1 ){
       window.alert("Must Choose at Least One Character Type");
-    password = "";
-    chars = "";
       generatePassword();
     }
 }
